@@ -1,11 +1,9 @@
 import React, { useState } from "react";
-import { Link, useLocation, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 import menu from "../imgs/menu.png";
 import logo from "../imgs/logo.png";
 
 const Navbar = () => {
-  const history = useHistory();
-  const location = useLocation();
   const [toggle, setToggle] = useState(true);
 
   const toggleIcon = () => {

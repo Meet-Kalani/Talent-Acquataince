@@ -12,7 +12,7 @@ const Footer = () => {
     <div id="footer">
         <div className="d-flex">
             {   
-                (location.pathname.slice(0,9) != "/employer" && location.pathname.slice(0,9) != "/employee" && location.pathname.slice(0,6) != "/admin" ) && <div className="quick-links">
+                (location.pathname.slice(0,9) !== "/employer" && location.pathname.slice(0,9) !== "/employee" && location.pathname.slice(0,6) !== "/admin" ) && <div className="quick-links">
                 <h3>Quick Links</h3>
                 <Link to="/">Home</Link><br />
                 <Link to="/dashboard">Dashboard</Link><br />
