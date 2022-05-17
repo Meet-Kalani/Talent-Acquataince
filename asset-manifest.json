@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Talent-Acquataince/static/css/main.c7b9abec.css",
-    "main.js": "/Talent-Acquataince/static/js/main.7b33aa09.js",
+    "main.js": "/Talent-Acquataince/static/js/main.70d2a94a.js",
     "static/media/login.png": "/Talent-Acquataince/static/media/login.ffbf4d5f52a1bc7f4e95.png",
     "static/media/signup.png": "/Talent-Acquataince/static/media/signup.48ef7fef4a56687e8056.png",
     "index.html": "/Talent-Acquataince/index.html",
     "main.c7b9abec.css.map": "/Talent-Acquataince/static/css/main.c7b9abec.css.map",
-    "main.7b33aa09.js.map": "/Talent-Acquataince/static/js/main.7b33aa09.js.map"
+    "main.70d2a94a.js.map": "/Talent-Acquataince/static/js/main.70d2a94a.js.map"
   },
   "entrypoints": [
     "static/css/main.c7b9abec.css",
-    "static/js/main.7b33aa09.js"
+    "static/js/main.70d2a94a.js"
   ]
 }
