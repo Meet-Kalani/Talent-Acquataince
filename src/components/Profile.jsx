@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
 const baseURL = "https://talent-acquataince.herokuapp.com";
+// const baseURL = "http://localhost:5000";
 
 const Profile = () => {
   const [profile, setProfile] = useState({});
@@ -20,6 +21,7 @@ const Profile = () => {
       )
       .then((res) => {
         setProfile(res.data);
+        console.log(res.data)
       })
       .catch((err) => {
         console.log(err);

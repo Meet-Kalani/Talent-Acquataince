@@ -3,6 +3,7 @@ import { Link,useHistory } from "react-router-dom";
 import SignupImg from "../imgs/signup.png";
 import axios from 'axios';
 const baseURL = "https://talent-acquataince.herokuapp.com";
+// const baseURL = "http://localhost:5000";
 
 const Signup = () => {
   const history = useHistory();

@@ -5,6 +5,7 @@ import locationIcon from '../imgs/location.png';
 import {useHistory,useLocation} from 'react-router-dom';
 import axios from 'axios';
 const baseURL = "https://talent-acquataince.herokuapp.com";
+// const baseURL = "http://localhost:5000";
 
 const Job = (props) => {
     const history = useHistory();
