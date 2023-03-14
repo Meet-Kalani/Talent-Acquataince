@@ -40,22 +40,22 @@ const Navbar = () => {
             <div className="navigation-menu">
               <ul>
                 <li>
-                  <Link to="/">Home</Link>
+                  <Link to="/Talent-Acquataince">Home</Link>
                 </li>
                 <li>
-                  <Link to="/dashboard">Dashboard</Link>
+                  <Link to="/Talent-Acquataince/dashboard">Dashboard</Link>
                 </li>
                 <li>
-                  <Link to="/profile">Profile</Link>
+                  <Link to="/Talent-Acquataince/profile">Profile</Link>
                 </li>
                 <li>
-                  <Link to="/login">Login / Signup</Link>
+                  <Link to="/Talent-Acquataince/login">Login / Signup</Link>
                 </li>
                 <li>
-                  <Link to="/about">About</Link>
+                  <Link to="/Talent-Acquataince/about">About</Link>
                 </li>
                 <li>
-                  <Link to="/contact">Contact / FAQs</Link>
+                  <Link to="/Talent-Acquataince/contact">Contact / FAQs</Link>
                 </li>
               </ul>
             </div>

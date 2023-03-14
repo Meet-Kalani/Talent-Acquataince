@@ -1,7 +1,7 @@
 import React,{useState} from "react";
 import axios from "axios";
 import{useLocation,useHistory} from "react-router-dom";
-const baseURL = "https://talent-acquataince.herokuapp.com";
+const baseURL = "https://talent-acquataince.onrender.com";
 // const baseURL = "http://localhost:5000";
 
 const CreateFeedback = () => {
@@ -24,7 +24,7 @@ const CreateFeedback = () => {
             }
         })
         .then((res)=>{
-            history.push('/employee');
+            history.push('/Talent-Acquataince/employee');
         })
         .catch((err)=>{
             console.log(err);

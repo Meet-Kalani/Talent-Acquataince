@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link,useHistory } from "react-router-dom";
 import SignupImg from "../imgs/signup.png";
 import axios from 'axios';
-const baseURL = "https://talent-acquataince.herokuapp.com";
+const baseURL = "https://talent-acquataince.onrender.com";
 // const baseURL = "http://localhost:5000";
 
 const Signup = () => {
@@ -32,7 +32,7 @@ const Signup = () => {
       })
       .then((res) => {
         window.localStorage.setItem('candidate_token','');
-        history.push('/login');
+        history.push('/Talent-Acquataince/login');
       })
       .catch((err) => {
         console.log(err);
@@ -102,7 +102,7 @@ const Signup = () => {
           {passwordErr ? <span>This field cannot be empty.</span> : ""}<br />
           {passwordLengthErr ? <span>The length of this field must be greater than 8 characters.</span> : ""}<br/>
           {loadSubmit ? <button onClick={handleSignupBtnClick}>Submit</button> : <center><p>Hold on! Redirecting...</p></center>}
-                    <Link to="/login">Already a Member?</Link>
+                    <Link to="/Talent-Acquataince/login">Already a Member?</Link>
         </div>
       </div>
     </div>

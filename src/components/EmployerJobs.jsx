@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from 'react';
 import Job from './Job';
 import axios from 'axios';
-const baseURL = "https://talent-acquataince.herokuapp.com";
+const baseURL = "https://talent-acquataince.onrender.com";
 // const baseURL = "http://localhost:5000";
 
 const EmployerJobs = () => {

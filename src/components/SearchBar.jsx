@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import searchIcon from "../imgs/search-icon.png";
 import Job from './Job';
-const baseURL = "https://talent-acquataince.herokuapp.com";
+const baseURL = "https://talent-acquataince.onrender.com";
 // const baseURL = "http://localhost:5000";
 
 const SearchBar = () => {

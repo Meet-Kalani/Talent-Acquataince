@@ -4,7 +4,7 @@ import Popup from "./Popup";
 import { useLocation, useHistory , Link} from "react-router-dom";
 import axios from "axios";
 import jwt_decode from "jwt-decode";
-const baseURL = "https://talent-acquataince.herokuapp.com";
+const baseURL = "https://talent-acquataince.onrender.com";
 // const baseURL = "http://localhost:5000";
 
 const JobDescription = (props) => {
@@ -59,17 +59,17 @@ const JobDescription = (props) => {
   const handleViewApplicantsBtnClick = () => {
     if(location.pathname.slice(0,9) === '/employee'){
       history.push({
-        pathname:"/employee/view-applicants",
+        pathname:"/Talent-Acquataince/employee/view-applicants",
         state:{job_id:job._id,company_id:job.company_id}
       })
     }else if(location.pathname.slice(0,9) === '/employer'){
       history.push({
-        pathname:'/employer/dashboard',
+        pathname:'/Talent-Acquataince/employer/dashboard',
         state:{job_id:job._id}
       })
     } else if(location.pathname.slice(0,6) === '/admin'){
       history.push({
-        pathname:"/admin/view-applicants",
+        pathname:"/Talent-Acquataince/admin/view-applicants",
         state:{job_id:job._id,company_id:job.company_id}
       })
     }
@@ -97,12 +97,12 @@ const JobDescription = (props) => {
   const handleEditBtnClick = () => {
     if(location.pathname.slice(0,9) === "/employer"){
       history.push({
-      pathname:'/employer/job/edit',
+      pathname:'/Talent-Acquataince/employer/job/edit',
       state:{job_id:props.job._id}
   })
   } else{
       history.push({
-          pathname:'/admin/job/edit',
+          pathname:'/Talent-Acquataince/admin/job/edit',
           state:{job_id:props.job._id}
       })
   }
@@ -123,7 +123,7 @@ const JobDescription = (props) => {
         },
       })
       .then((res) => {
-        history.push('/');
+        history.push('/Talent-Acquataince');
       })
       .catch((err) => {
         console.log(err);
@@ -150,7 +150,7 @@ const JobDescription = (props) => {
       </div>
       {isOpen && <Popup
       content={<>
-        <p>For applying in job you need to update your profile and you have to provide details about yourself. So head over to <Link to="/profile">profile</Link> page</p>   
+        <p>For applying in job you need to update your profile and you have to provide details about yourself. So head over to <Link to="/Talent-Acquataince/profile">profile</Link> page</p>   
       </>}
       handleClose={togglePopup}
       />}

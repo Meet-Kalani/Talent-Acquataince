@@ -3,7 +3,7 @@ import { Link, useLocation, useHistory } from "react-router-dom";
 import LoginImg from "../imgs/login.png";
 import Popup from './Popup'
 import axios from "axios";
-const baseURL = "https://talent-acquataince.herokuapp.com";
+const baseURL = "https://talent-acquataince.onrender.com";
 // const baseURL = "http://localhost:5000";
 
 const Login = () => {
@@ -51,7 +51,7 @@ const Login = () => {
         .then((res) => {
           if(res.data.success){
             window.localStorage.setItem("employer_token", res.data.token); 
-            history.push("/employer");
+            history.push("/Talent-Acquataince/employer");
           } else {
             setMail("");
             setPassword("");
@@ -90,7 +90,7 @@ const Login = () => {
         .then((res) => {
           if(res.data.success){
             window.localStorage.setItem("candidate_token", res.data.token); 
-            history.push("/");
+            history.push("/Talent-Acquataince");
           } else {
             setMail("");
             setPassword("");
@@ -153,16 +153,16 @@ const Login = () => {
           />
           {passwordErr ? <span>This field cannot be empty.</span> : ""}
           <br />
-          {location.pathname === "/login" && (
+          {location.pathname === "/Talent-Acquataince/login" && (
             <button onClick={()=>handleCandidateLoginBtnClick()}>Submit</button>
           )}
-          {location.pathname === "/employer/login" && (
+          {location.pathname === "/Talent-Acquataince/employer/login" && (
             <button onClick={()=>handleEmployerLoginBtnClick()}>Submit</button>
           )}
           {
-            (location.pathname === "/employer/login") ? <Link to="/employer/signup">New Member?</Link> : <Link to="/signup">New Member?</Link>
+            (location.pathname === "/Talent-Acquataince/employer/login") ? <Link to="/Talent-Acquataince/employer/signup">New Member?</Link> : <Link to="/Talent-Acquataince/signup">New Member?</Link>
           }
-          <Link to={location.pathname.slice(0,9) === "/employer" ? "/employer/contact" : "/contact"} className="forgot-password">Forgot Password?</Link>
+          <Link to={location.pathname.slice(0,9) === "/Talent-Acquataince/employer" ? "/Talent-Acquataince/employer/contact" : "/Talent-Acquataince/contact"} className="forgot-password">Forgot Password?</Link>
         </div>
       </div>
     </div>

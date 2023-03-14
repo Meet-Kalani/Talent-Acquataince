@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link,useHistory } from "react-router-dom";
 import axios from "axios";
-const baseURL = "https://talent-acquataince.herokuapp.com";
+const baseURL = "https://talent-acquataince.onrender.com";
 // const baseURL = "http://localhost:5000";
 
 const EmployerSignup = () => {
@@ -72,7 +72,7 @@ const EmployerSignup = () => {
           company_profile_picture:company_profile_picture_URL
         })
         .then((res) => {
-          history.push('/employer/login');
+          history.push('/Talent-Acquataince/employer/login');
         })
         .catch((err) => {
           console.log(err);
@@ -224,7 +224,7 @@ const EmployerSignup = () => {
               <p>Hold on! Redirecting...</p>
             </center>
           )}
-          <Link to="/login">Already a Member?</Link>
+          <Link to="/Talent-Acquataince/login">Already a Member?</Link>
         </div>
       </div>
     // </div>

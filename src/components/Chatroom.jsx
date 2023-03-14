@@ -4,10 +4,10 @@ import io from 'socket.io-client';
 import{useLocation} from 'react-router-dom';
 import axios from "axios";
 import jwt_decode from "jwt-decode";
-const baseURL = "https://talent-acquataince.herokuapp.com";
+const baseURL = "https://talent-acquataince.onrender.com";
 // const baseURL = "http://localhost:5000";
 
-const socket = io.connect('https://talent-acquataince.herokuapp.com');
+const socket = io.connect('https://talent-acquataince.onrender.com');
 // const socket = io.connect('http://localhost:5000');
 
 const Chatroom = () => {

@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from 'react';
 import {useHistory,useLocation} from "react-router-dom";
 import axios from "axios";
-const baseURL = "https://talent-acquataince.herokuapp.com";
+const baseURL = "https://talent-acquataince.onrender.com";
 // const baseURL = "http://localhost:5000";
 
 const Applicants = () => {
@@ -39,7 +39,7 @@ const Applicants = () => {
             applied_jobs.map((applied_job) => { 
               return (<tr key={applied_job._id}>
                 <td>{applied_job.name}</td>
-                <td><span onClick={()=>{history.push({pathname:'/employee/review-application',state:{company_id:location.state.company_id,candidate_id:applied_job._id,job_id:location.state.job_id}})}}>View Application -></span></td>
+                <td><span onClick={()=>{history.push({pathname:'/Talent-Acquataince/employee/review-application',state:{company_id:location.state.company_id,candidate_id:applied_job._id,job_id:location.state.job_id}})}}>View Application -></span></td>
               </tr>);
             })}
         </tbody>

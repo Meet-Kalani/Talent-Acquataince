@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
-const baseURL = "https://talent-acquataince.herokuapp.com";
+const baseURL = "https://talent-acquataince.onrender.com";
 // const baseURL = "http://localhost:5000";
 
 const Profile = () => {
@@ -28,7 +28,7 @@ const Profile = () => {
       });
       } else{
         history.push({
-          pathname:"/login",
+          pathname:"/Talent-Acquataince/login",
           state:{
             isLoggedIn: false
           }
@@ -37,7 +37,7 @@ const Profile = () => {
 
   const handleEditProfileBtnClick = () => {
     history.push({
-      pathname: "/profile/edit",
+      pathname: "/Talent-Acquataince/profile/edit",
       state: { profile_id: profile._id },
     });
   };

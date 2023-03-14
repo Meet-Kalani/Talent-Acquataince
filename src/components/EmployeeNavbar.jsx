@@ -41,13 +41,13 @@ const Navbar = () => {
             <div className="navigation-menu">
             <ul>
               <li>
-                <Link to="/employee" >Home</Link>
+                <Link to="/Talent-Acquataince/employee" >Home</Link>
               </li>
               <li>
-                <Link to="/employee/login">Login / Signup</Link>
+                <Link to="/Talent-Acquataince/employee/login">Login / Signup</Link>
               </li>
               <li>
-                <Link to="/employee/about">About</Link>
+                <Link to="/Talent-Acquataince/employee/about">About</Link>
               </li>
             </ul>
           </div>

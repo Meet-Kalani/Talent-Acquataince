@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import jwt_decode from 'jwt-decode';
 import axios from "axios";
 import {useHistory} from "react-router-dom";
-const baseURL = "https://talent-acquataince.herokuapp.com";
+const baseURL = "https://talent-acquataince.onrender.com";
 // const baseURL = "http://localhost:5000";
 
 const Dashboard = () => {
@@ -14,7 +14,7 @@ const Dashboard = () => {
     tokenData = jwt_decode(window.localStorage.getItem('candidate_token'));
   } else{
     history.push({
-      pathname:"/login",
+      pathname:"/Talent-Acquataince/login",
       state:{
         isLoggedIn: false
       }
@@ -56,7 +56,7 @@ const Dashboard = () => {
                 <td>{applied_job.status}</td>
                 <td><span onClick={() => {
                   history.push({
-                    pathname:"/review-application",
+                    pathname:"/Talent-Acquataince/review-application",
                     state:{
                       candidate_id:tokenData.credentials.userID,
                       job_id: applied_job._id

@@ -14,10 +14,10 @@ const Footer = () => {
             {   
                 (location.pathname.slice(0,9) !== "/employer" && location.pathname.slice(0,9) !== "/employee" && location.pathname.slice(0,6) !== "/admin" ) && <div className="quick-links">
                 <h3>Quick Links</h3>
-                <Link to="/">Home</Link><br />
-                <Link to="/dashboard">Dashboard</Link><br />
-                <Link to="/profile">Profile</Link><br />
-                <Link to="/contact">Contact</Link>
+                <Link to="/Talent-Acquataince/">Home</Link><br />
+                <Link to="/Talent-Acquataince/dashboard">Dashboard</Link><br />
+                <Link to="/Talent-Acquataince/profile">Profile</Link><br />
+                <Link to="/Talent-Acquataince/contact">Contact</Link>
             </div> 
             }
             <div>

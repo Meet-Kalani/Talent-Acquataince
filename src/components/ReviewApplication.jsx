@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import jwt_decode from "jwt-decode";
 import {  useHistory, useLocation } from "react-router-dom";
-const baseURL = "https://talent-acquataince.herokuapp.com";
+const baseURL = "https://talent-acquataince.onrender.com";
 // const baseURL = "http://localhost:5000";
 
 const ReviewApplication = () => {
@@ -38,7 +38,7 @@ const ReviewApplication = () => {
   
   const handleFeedbackBtnClick = () =>{
       history.push({
-          pathname:"/employee/send-feedback",
+          pathname:"/Talent-Acquataince/employee/send-feedback",
           state:{
               candidate_id: location.state.candidate_id,
               job_id:location.state.job_id,
@@ -49,7 +49,7 @@ const ReviewApplication = () => {
 
   const handleFeedbackClick = () => {
     history.push({
-      pathname:"/feedback",
+      pathname:"/Talent-Acquataince/feedback",
       state:{
         candidate_id: tokenData.credentials.userID,
         job_id:location.state.job_id

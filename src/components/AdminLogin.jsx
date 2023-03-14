@@ -3,7 +3,7 @@ import axios from "axios";
 import {useHistory, useLocation} from "react-router-dom";
 import LoginImg from "../imgs/login.png";
 import Popup from './Popup'
-const baseURL = "https://talent-acquataince.herokuapp.com";
+const baseURL = "https://talent-acquataince.onrender.com";
 // const baseURL = "http://localhost:5000";
 
 
@@ -35,7 +35,7 @@ const AdminLogin = () => {
       .then((res) => {
         if(res.data.success){
           window.localStorage.setItem("admin_token", res.data.token); 
-          history.push("/admin");
+          history.push("/Talent-Acquataince/admin");
         } else {
           alert('Invalid credentials ! Please try again...');
           setMail("");

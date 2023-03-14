@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from 'react';
 import {useHistory} from 'react-router-dom';
 import axios from "axios";
-const baseURL = "https://talent-acquataince.herokuapp.com";
+const baseURL = "https://talent-acquataince.onrender.com";
 // const baseURL = "http://localhost:5000";
 
 const AdminPanel = () => {
@@ -41,7 +41,7 @@ const AdminPanel = () => {
 
     const handleCandidateBtnClick = () => {
         history.push({
-            pathname:"/admin/list/candidates",
+            pathname:"/Talent-Acquataince/admin/list/candidates",
             state:{
                 candidates:candidates,
                 isFromAdmin:true
@@ -51,7 +51,7 @@ const AdminPanel = () => {
 
     const handleEmployerBtnClick = ()=>{
         history.push({
-            pathname:"/admin/list/employers",
+            pathname:"/Talent-Acquataince/admin/list/employers",
             state:{
                 employers:employers,
                 isFromAdmin:true

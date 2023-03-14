@@ -980,6 +980,14 @@ a {
       display:initial;
       div{
         margin-top: 30px;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center;
+        .d-flex-icon{
+          display:flex;
+          flex-direction: row;
+        }
       }
       .quick-links{
         display:flex;

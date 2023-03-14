@@ -36,156 +36,156 @@ import { useLocation,Switch, Route, useHistory } from "react-router-dom";
 function App() {
   const location = useLocation();
   const history = useHistory();
-
+  console.log(location.pathname.slice(0,28))
     return (
     <div>
-      {location.pathname.slice(0,6) === "/admin" && <AdminNavbar />}
-      {location.pathname.slice(0,9) === "/employee" && <EmployeeNavbar />}
-      {location.pathname.slice(0,9) === "/employer" && <EmployerNavbar />}
-      {(location.pathname.slice(0,6) !== "/admin" && location.pathname.slice(0,9) !== "/employer" && location.pathname.slice(0,9) !== "/employee")  && <CandidateNavbar />}
+      {location.pathname.slice(0,25) === "/Talent-Acquataince/admin" && <AdminNavbar />}
+      {location.pathname.slice(0,28) === "/Talent-Acquataince/employee" && <EmployeeNavbar />}
+      {location.pathname.slice(0,28) === "/Talent-Acquataince/employer" && <EmployerNavbar />}
+      {(location.pathname.slice(0,25) !== "/Talent-Acquataince/admin" && location.pathname.slice(0,28) !== "/Talent-Acquataince/employer" && location.pathname.slice(0,28) !== "/Talent-Acquataince/employee")  && <CandidateNavbar />}
       <Switch>
-      <Route path="/admin/send-feedback">
+      <Route path="/Talent-Acquataince/admin/send-feedback">
           <CreateFeedback />
         </Route>
-        <Route path="/admin/review-application">
+        <Route path="/Talent-Acquataince/admin/review-application">
         <div className='d-flex-chat'>
           <ReviewApplication />
           <Chatroom />
         </div>
         </Route>
-        <Route path="/admin/view-applicants">
+        <Route path="/Talent-Acquataince/admin/view-applicants">
           <Applicants />
         </Route>
-        <Route path="/admin/job/edit">
+        <Route path="/Talent-Acquataince/admin/job/edit">
           <EditJob />
         </Route>
-        <Route path="/admin/job-description">
+        <Route path="/Talent-Acquataince/admin/job-description">
           <JobDescription />
         </Route>
-        <Route path="/admin/about">
+        <Route path="/Talent-Acquataince/admin/about">
           <About />
         </Route>
-        <Route path="/admin/list/employers">
+        <Route path="/Talent-Acquataince/admin/list/employers">
           <AdminEmployersList />
         </Route>
-        <Route path="/admin/list/candidates">
+        <Route path="/Talent-Acquataince/admin/list/candidates">
           <AdminCandidatesList />
         </Route>
-      <Route path="/admin/login">
+      <Route path="/Talent-Acquataince/admin/login">
           <AdminLogin />
         </Route>
-        <Route path="/admin">
+        <Route path="/Talent-Acquataince/admin">
           <AdminPanel />
         <h3 className='candidate-content-heading'>Listed Jobs</h3>
           <Jobs />
         </Route>
-        <Route path="/employer/review-application">
+        <Route path="/Talent-Acquataince/employer/review-application">
           <ReviewApplication />
           <Feedback />
         </Route>
-        <Route path="/employer/dashboard">
+        <Route path="/Talent-Acquataince/employer/dashboard">
           <EmployerDashboard />
         </Route>
-        <Route path="/employer/job/edit">
+        <Route path="/Talent-Acquataince/employer/job/edit">
           <EditJob />
         </Route>
-        <Route path="/employer/job-description">
+        <Route path="/Talent-Acquataince/employer/job-description">
           <JobDescription />
         </Route>        
-        <Route path="/employer/signup">
+        <Route path="/Talent-Acquataince/employer/signup">
           <EmployerSignup />
         </Route>
-        <Route path="/employer/about">
+        <Route path="/Talent-Acquataince/employer/about">
           <About />
         </Route>
-        <Route path="/employer/signup">
+        <Route path="/Talent-Acquataince/employer/signup">
           <EmployerSignup />
         </Route>
-        <Route path="/employer/login">
+        <Route path="/Talent-Acquataince/employer/login">
           <Login />
         </Route>
-        <Route path="/employer/contact">
+        <Route path="/Talent-Acquataince/employer/contact">
           <div className = "d-flex-contact">
           <Contact />
           <Faq />
             </div>
         </Route>
-        <Route path="/employer/add/job">
+        <Route path="/Talent-Acquataince/employer/add/job">
           <CreateJob />
         </Route>
-        <Route path="/employer">
+        <Route path="/Talent-Acquataince/employer">
         <div className="cta-d-flex">
           <div>
           <h3 className='employer-content-heading'>My Listed Jobs</h3>
           </div>
           <div>
-            <button onClick={()=> history.push("/employer/add/job")}>Create New Job</button>
+            <button onClick={()=> history.push("/Talent-Acquataince/employer/add/job")}>Create New Job</button>
           </div>
         </div>
           <EmployerJobs />
         </Route>
-        <Route path="/employee/send-feedback">
+        <Route path="/Talent-Acquataince/employee/send-feedback">
           <CreateFeedback />
         </Route>
-        <Route path="/employee/review-application">
+        <Route path="/Talent-Acquataince/employee/review-application">
           <div className='d-flex-chat'>
           <ReviewApplication />
           <Chatroom />
           </div>
         </Route>
-        <Route path="/employee/view-applicants">
+        <Route path="/Talent-Acquataince/employee/view-applicants">
           <Applicants />
         </Route>
-        <Route path="/employee/job-description">
+        <Route path="/Talent-Acquataince/employee/job-description">
           <JobDescription />
         </Route>
-        <Route path="/employee/login">
+        <Route path="/Talent-Acquataince/employee/login">
           <EmployeeLogin />
         </Route>
-        <Route path="/employee/about">
+        <Route path="/Talent-Acquataince/employee/about">
           <About />
         </Route>
-        <Route path="/employee">
+        <Route path="/Talent-Acquataince/employee">
         <h3 className='candidate-content-heading'>Listed Jobs</h3>
           <Jobs />
         </Route>
-        <Route path="/contact">
+        <Route path="/Talent-Acquataince/contact">
           <div className="d-flex-contact">
           <Contact />
           <Faq/>
           </div>
         </Route>
-        <Route path="/feedback">
+        <Route path="/Talent-Acquataince/feedback">
           <Feedback />
         </Route>
-        <Route path="/review-application">
+        <Route path="/Talent-Acquataince/review-application">
         <div className='d-flex-chat'>
           <ReviewApplication />
           <Chatroom />
           </div>
         </Route>
-        <Route path="/profile/edit">
+        <Route path="/Talent-Acquataince/profile/edit">
           <EditProfile />
         </Route>
-        <Route path="/job-description">
+        <Route path="/Talent-Acquataince/job-description">
           <JobDescription />
         </Route>
-        <Route path="/about">
+        <Route path="/Talent-Acquataince/about">
           <About />
         </Route>
-        <Route path="/profile">
+        <Route path="/Talent-Acquataince/profile">
           <Profile />
         </Route>
-        <Route path="/dashboard">
+        <Route path="/Talent-Acquataince/dashboard">
           <Dashboard />
         </Route>
-        <Route path="/signup">
+        <Route path="/Talent-Acquataince/signup">
           <Signup />
         </Route>
-        <Route path="/login">
+        <Route path="/Talent-Acquataince/login">
           <Login />
         </Route>
-        <Route path="/">
+        <Route path="/Talent-Acquataince/">
           <SearchBar />
         <h3 className='candidate-content-heading'>Jobs</h3>
           <Jobs />
